@@ -210,7 +210,7 @@ body {
 .link:link,
 .link:visited {
   display: inline-block;
-  color: #e67e22;
+  color: #3b627f;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -237,7 +237,7 @@ body {
 .list-icon {
   width: 3rem;
   height: 3rem;
-  color: #e67e22;
+  color: #5d9aca;
 }
 *:focus {
   outline: none;
