@@ -295,9 +295,9 @@ strong {
 /* TESTIMONIALS SECTION */
 /* *************** */
 .section-testimonials {
-  background-color: #fdf2e9;
+  background-color: #e7f5ff;
   display: grid;
-  grid-template-columns: 55fr 45fr;
+  grid-template-columns: 55fr 
   align-items: center;
 }
 .testimonials-container {
@@ -305,7 +305,7 @@ strong {
 }
 .testimonials {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 4.8rem;
   column-gap: 8rem;
 }
@@ -323,12 +323,12 @@ strong {
   font-size: 1.6rem;
   color: #6f6f6f;
 }
-.gallery {
+ .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
   padding: 1.6rem;
-}
+} 
 .gallery-item {
   overflow: hidden;
 }
