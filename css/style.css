@@ -194,13 +194,13 @@
 .step-img-box::before {
   width: 60%;
   padding-bottom: 60%;
-  background-color: #fdf2e9;
+  background-color: #d2e5f7;
   z-index: -2;
 }
 .step-img-box::after {
   width: 45%;
   padding-bottom: 45%;
-  background-color: #fae5d3;
+  background-color: #bbd8f3;
   z-index: -1;
 }
 .step-number {
