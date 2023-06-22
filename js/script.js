@@ -1,21 +1,3 @@
-console.log("hello world");
-
-const myName = "lucas oliv";
-const h1 = document.querySelector(".heading-primary");
-console.log(myName);
-console.log(h1);
-
-// h1.addEventListener("click", function () {
-//   h1.textContent = myName;
-//   h1.style.backgroundColor = "red";
-//   h1.style.padding = "5rem";
-// });
-
-// set current year
-const yearEl = document.querySelector(".year");
-const currentYear = new Date().getFullYear();
-yearEl.textContent = currentYear;
-
 /////////////////////////////////////////////////////////////////
 // Make mobile navigation work
 const btnNavEl = document.querySelector(".btn-mobile-nav");
@@ -46,6 +28,20 @@ allLinks.forEach(function (link) {
 
     if (link.classList.contains("main-nav-link"))
       headerEl.classList.toggle("nav-open");
+  });
+});
+// Obter todos os links externos
+const externalLinks = document.querySelectorAll(
+  'a[href^="http"]:not([href*="' + window.location.hostname + '"])'
+);
+
+// Adicionar evento de clique aos links externos
+externalLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Impedir o comportamento padrão do clique
+
+    // Abrir o link em uma nova aba
+    window.open(link.getAttribute("href"), "_blank");
   });
 });
 
