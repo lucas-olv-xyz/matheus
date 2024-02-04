@@ -289,3 +289,18 @@
     margin-bottom: 4.8rem;
   }
 }
+@media (min-width: 768px) {
+  .iconeWpp {
+    bottom: 80px;
+  }
+}
+@media (min-width: 568px) {
+  .iconeWpp {
+    bottom: 110px;
+  }
+}
+@media (min-width: 398px) {
+  .iconeWpp {
+    bottom: 110px;
+  }
+}

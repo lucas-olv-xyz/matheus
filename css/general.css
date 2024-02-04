@@ -201,6 +201,11 @@ body {
 } /* ************* */
 /* HEADER */
 /* ************* */
+.iconeWpp {
+  z-index: 188;
+  position: fixed;
+  right: 10px;
+}
 .header {
   display: flex;
   justify-content: space-between;
