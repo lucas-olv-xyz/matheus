@@ -1,7 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNRK8D05F2"></script>
+<!-- Event snippet for Botão WhatsApp conversion -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNRK8D05F2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PNRK8D05F2');
+</script>
+
+<!-- Event snippet for Botão de Whats08Fev25 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+
+<script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11168370055/-ZGzCIjgp5saEIebv80p',
+          'value': 1.0,
+          'currency': 'BRL',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
     
+  
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- that line below is crucial for a responsive design.. always write that -->
@@ -34,7 +68,7 @@
     <!-- nav-open -->
     <header class="header">
       <a href="#">
-      <img class="logo" alt="matheus martins logo" src="img/omnifood-logo.webp" /></a>
+      <img class="logo" alt="matheus martins logo" src="img/mmlogo.webp" /></a>
 
       <nav class="main-nav">
         <ul class="main-nav-list">
@@ -42,7 +76,7 @@
           <li><a class="main-nav-link" href="#meals">Consultório</a></li>
           <li><a class="main-nav-link" href="#testimonials">Depoimentos</a></li>
           <li><a class="main-nav-link" href="#contato">Contato</a></li>
-          <li><a class="main-nav-link nav-cta" href="#cta">Fale comigo</a></li>
+          <li><a class="main-nav-link nav-cta" href="https://api.whatsapp.com/send?phone=5561982836983" onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});">Fale comigo</a></li>
         </ul>
       </nav>
 
@@ -54,23 +88,23 @@
 
     <main>
       <section class="section-hero">
-        <div class="iconeWpp">
-          <a href="https://api.whatsapp.com/send?phone=5511995056102&text=Olá gostaria de saber mais sobre o seu trabalho de psicólogo.">
-<img src="img/whatsapp.png">
-          </a>
-        </div>
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="heading-primary">
               Especialista em Terapia Cognitivo-Comportamental 
             </h1>
+            <h1 class="heading-tertiary">Com ênfase no tratamento de dependência tecnológica</h1>
+            
             <p class="hero-description">
-              Trabalho desenvolvendo as competências pessoais de meus clientes para que estejam conscientes de seu potencial, com foco em aumentar sua qualidade de vida. Isso não tem preço! 
+                Ajudo você a encontrar equilíbrio entre o mundo online e o offline, superando desafios como ansiedade, procrastinação e vícios digitais. Redescubra seu potencial e conquiste uma rotina mais saudável e produtiva!
             </p>
-            <a href="#cta" class="btn btn--full margin-right-sm"
+            <a href="https://api.whatsapp.com/send?phone=5561982836983" onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});" class="btn btn--full margin-right-sm"
               >Fale comigo</a
             >
             <a href="#how" class="btn btn--outline">Saiba mais &darr;</a>
+            
+
+
             <div class="delivered-meals">
               <div class="delivered-imgs">
                 <img src="img/customers/customer-1.webp" alt="Foto de cliente" />
@@ -95,16 +129,74 @@
               </p>
             </div>
           </div>
-          <div class="hero-img-box">
-            <img
-              src="img/hero.webp"
-              class="hero-img"
-              alt="3 fotos do dr matheus, a primeira ele está sorrindo, a segunda esta sentado em uma poltrona sorrindo para a camera, a terceira esta sentado na poltrona com expressão facial profissional"
-            />
-          </div>
+            <!-- Caixa do vídeo -->
+            <div class="hero-video-box">
+                <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/Zyyn5rvmJ9I"
+                title="Apresentação Dr. Matheus" 
+                frameborder="0"
+                allow="accelerometer; 
+                        autoplay; 
+                        clipboard-write; 
+                        encrypted-media; 
+                        gyroscope; 
+                        picture-in-picture"
+                allowfullscreen>
+                </iframe>
+            </div>
         </div>
       </section>
 
+<!-- Logo depois do section-hero, antes do section-how -->
+<section class="section-authority" id="authority">
+    <div class="container center-text">
+      <!-- Sub-título da seção -->
+      <span class="subheading">Meus números</span>
+      <!-- Título principal da seção -->
+      <h2 class="heading-secondary">Construindo confiança e autoridade</h2>
+      <p class="step-description">
+        Ao longo dos anos, ajudei diversas pessoas a encontrarem equilíbrio emocional
+        e já realizei palestras sobre temas como dependência tecnológica, relacionamentos
+        e desenvolvimento pessoal.
+      </p>
+    </div>
+  
+    <!-- Cards com números ou fatos relevantes -->
+    <div class="container grid grid--3-cols section-authority-grid">
+      
+      <div class="authority-item">
+        <ion-icon name="medal-outline" class="authority-icon"></ion-icon>
+        <h3 class="authority-title">4.200+</h3>
+        <p class="authority-text">Sessões já realizadas</p>
+      </div>
+  
+      <div class="authority-item">
+        <ion-icon name="people-circle-outline" class="authority-icon"></ion-icon>
+        <h3 class="authority-title">Palestras</h3>
+        <p class="authority-text">Conferências realizadas em empresas, escolas e eventos sobre bem-estar mental e dependência digital.</p>
+      </div>
+  
+      <div class="authority-item">
+        <ion-icon name="logo-youtube" class="authority-icon"></ion-icon>
+        <h3 class="authority-title">Canal no YouTube</h3>
+        <p class="authority-text">Acesse vídeos sobre saúde mental, terapia, desenvolvimento pessoal e muito mais.</p>
+      </div>
+  
+    </div>
+  
+    <!-- Botão para o canal do YouTube ou vídeo embed -->
+    <div class="container center-text section-authority-cta">
+      <a 
+        href="https://youtube.com/seu-canal" 
+        class="btn btn--outline" 
+        target="_blank"
+      >
+        Visitar meu canal no YouTube
+      </a>
+    </div>
+  </section>
 
       <section class="section-how" id="how">
         <div class="container">
@@ -390,26 +482,20 @@
         </div>
       </section> 
 
-      <section class="section-cta" id="cta">
+       <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
               <h2 class="heading-secondary">Descubra o caminho para uma mente saudável e feliz!</h2>
               <p class="cta-text">
                 Se você está pronto(a) para dar o primeiro passo rumo a uma vida mais plena e feliz, não hesite em entrar em contato comigo agora mesmo pelo WhatsApp. Estou aqui para ouvir, compreender e oferecer orientação especializada para ajudá-lo(a) a superar desafios e alcançar seus objetivos.
-
-
               </p>
 
-              <a class="btn btn--form" href="https://api.whatsapp.com/send?phone=5561982836983">
+              <a class="btn btn--form" href="https://api.whatsapp.com/send?phone=5561982836983" onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});">
                 <ion-icon name="logo-whatsapp"></ion-icon> Converse comigo agora mesmo pelo WhatsApp
               </a>
-              
-              <!-- <button class="btn btn--form"><ion-icon name="logo-whatsapp"></ion-icon> Converse comigo agora mesmo pelo WhatsApp</button> -->
             </div>
-          </form>
-          
-            <div
+              <div
               class="cta-img-box"
               role="img"
               aria-label="mulher sorrindo na praia"
@@ -419,11 +505,11 @@
       </section>
     </main>
 
-    <footer class="footer" id="contato">
+   <footer class="footer" id="contato">
 <div class="container grid grid--footer">
   <div class="logo-col">
     <a href="#" class="footer-logo">
-      <img class="logo" alt="matheus martins logo" src="img/omnifood-logo.webp" />
+      <img class="logo" alt="matheus martins logo" src="img/mmlogo.webp" />
     </a>
 
 <ul class="social-links">
@@ -441,45 +527,28 @@
     <address class="contacts">
       <p class="adress">SGAN 607, Conj A, Bl B, Sala 126 e 114 - 70380-301</p>
       <p>
-        <a class="footer-link"href="tel:61-99805-9243"> (61) 98283-6983</a><br/>
+        <a class="footer-link"href="tel:61 98283-6983"> (61) 98283-6983</a><br/>
         
-      <a class="footer-link"href="mailto:hello@omnifood.com">teste@teste.com</a>
+      <a class="footer-link"href="mailto:psicologomatheusmartins@gmail.com">psicologomatheusmartins@gmail.com</a>
       </p>
     </address>
   </div>
-  
-  <!-- <nav class="nav-col">
-    <p class="footer-heading">Account</p>
-    <ul class="footer-nav">
-      <li><a class="footer-link"href="#">Create account</a></li>
-      <li><a class="footer-link"href="#">Sign in</a></li>
-      <li><a class="footer-link"href="#">iOS app</a></li>
-      <li><a class="footer-link"href="#">Android app</a></li>
-      <li></li>   
-    </ul>
-  </nav> -->
-<!-- 
-  <nav class="nav-col">
-    <p class="footer-heading">Company</p>
-    <ul class="footer-nav">
-      <li><a class="footer-link"href="#">About Omnifood</a></li>
-      <li><a class="footer-link"href="#">For Business</a></li>
-      <li><a class="footer-link"href="#">Cooking partners</a></li>
-      <li><a class="footer-link"href="#">Careers</a></li>
-      <li></li>   
-    </ul>
-  </nav> -->
-
-  <!-- <nav class="nav-col">
-    <p class="footer-heading">Recursos</p>
-    <ul class="footer-nav">
-      <li><a class="footer-link"href="#">Recipe directory</a></li>
-      <li><a class="footer-link"href="#">Help center</a></li>
-      <li><a class="footer-link"href="#">Privacy & terms</a></li>
-    </ul>
-  </nav> -->
-
-</div>
     </footer>
+
+    <!-- Event snippet for Botão WhatsApp3 conversion page -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function() {
+          if (typeof url != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          send_to: 'AW-11168370055/Fp2HCOnLlKgYEIebv80p',
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
   </body>
 </html>
