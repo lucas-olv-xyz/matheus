@@ -19,19 +19,19 @@
 }
 .main-nav-link:hover,
 .main-nav-link:active {
-  color: #cf711f;
+  color: #ffb472;
 }
 
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
-  background-color: #74c0fc;
+  background-color: #ffb472;
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
   color: #fff;
 }
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
-  background-color: #68ade3;
+  background-color: #ff7700;
 }
 /* MOBILE */
 .btn-mobile-nav {
@@ -59,7 +59,7 @@
   height: 8rem;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: #e7f5ff;
+  background-color: #f9f7f6;
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
@@ -71,7 +71,7 @@
 /* ************* */
 
 .section-hero {
-  background-color: #e7f5ff;
+  background-color: #f9f7f6;
   padding: 4.8rem 0 9.6rem 0;
 }
 .hero {
@@ -85,19 +85,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* Ajuste .hero-video-box para ocupar todo o espaço possível em telas pequenas */
-.hero-video-box {
-  flex: 1 1 400px;
-  max-width: 560px; /* ou o que achar melhor */
-  /* margin, padding etc. dependendo do seu layout */
-}
-
-/* Para forçar o iframe ser 100% responsivo, use o "aspect ratio hack" ou aspect-ratio */
-.hero-video-box iframe {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; /* funciona em navegadores mais modernos */
-}
 
 .hero-description {
   font-size: 2rem;
@@ -105,7 +92,9 @@
   margin-bottom: 4.8rem;
 }
 .hero-img {
-  width: 100%;
+  width: 80%;
+  border-radius: 20px;
+  margin-left: 20%;
 }
 .delivered-meals {
   display: flex;
@@ -131,7 +120,7 @@
   font-weight: 600;
 }
 .delivered-text span {
-  color: #5d9aca;
+  color: #ffb472;
   font-weight: 700;
 }
 
@@ -187,7 +176,7 @@
 
 .authority-icon {
   font-size: 3rem;
-  color: var(--color-primary, #eb5757); /* Ajuste para sua cor principal */
+  color: var(--color-primary, #f39543); /* Ajuste para sua cor principal */
   margin-bottom: 1rem;
 }
 
@@ -244,7 +233,7 @@
   /* 60% of parent's width */
   border-radius: 50%;
   padding-bottom: 60%;
-  background-color: #fdf2e9;
+  background-color: #f9f7f6;
 
   position: absolute;
   top: 50%;
@@ -267,13 +256,13 @@
 .step-img-box::before {
   width: 60%;
   padding-bottom: 60%;
-  background-color: #d2e5f7;
+  background-color: #fdf2e9;
   z-index: -2;
 }
 .step-img-box::after {
   width: 45%;
   padding-bottom: 45%;
-  background-color: #bbd8f3;
+  background-color: #ffe2cb;
   z-index: -1;
 }
 .step-number {
@@ -322,14 +311,14 @@
   font-weight: 600;
 }
 .tag--vegetarian {
-  background-color: #68ade3;
+  background-color: #f9f7f6;
 }
 .tag--vegan {
-  background-color: #74c0fc;
+  background-color: #f9f7f6;
 }
 /* .tag--paleo {
-  background-color: #ffd43b;
-} */
+    background-color: #ffd43b;
+  } */
 .meal-title {
   font-size: 2rem;
   color: #333;
@@ -358,7 +347,7 @@
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
-  color: #68ade3;
+  color: #ffb472;
 }
 strong {
   font-weight: 500;
@@ -368,7 +357,7 @@ strong {
 /* TESTIMONIALS SECTION */
 /* *************** */
 .section-testimonials {
-  background-color: #e7f5ff;
+  background-color: #fdf2e9;
   display: grid;
   grid-template-columns: 55fr;
   align-items: center;
@@ -487,10 +476,10 @@ strong {
   text-align: center;
 }
 .feature-icon {
-  color: #5d9aca;
+  color: #ff7700;
   height: 3.2rem;
   width: 3.2rem;
-  background-color: #bae0fe;
+  background-color: #ffb472;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
   border-radius: 50%;
@@ -521,7 +510,7 @@ strong {
   grid-template-columns: 2fr 1fr;
   /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
-  background-image: linear-gradient(to right bottom, #74c0fc, #5d9aca);
+  background-image: linear-gradient(to right bottom, #ffb472, #e67e22);
   overflow: hidden;
 }
 .cta-text-box {
@@ -541,7 +530,7 @@ strong {
 .cta-img-box {
   background-image: linear-gradient(
       to right bottom,
-      rgba(116, 192, 252, 0.35),
+      rgba(252, 209, 116, 0.35),
       rgba(93, 154, 202, 0.35)
     ),
     url("../img/eating.webp");
@@ -641,4 +630,189 @@ strong {
 .footer-link:hover,
 .footer-link:active {
   color: #555;
+}
+
+/* faz a seção do vídeo preencher 100% da viewport */
+.section-video {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* altura = 100% da tela */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* garante que o iframe ocupe todo o espaço da seção */
+.section-video .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-video .video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* seção online — mesma estrutura de espaçamento / cores que as outras */
+.section-online {
+  padding: 6rem 0;
+  background-color: #f9f7f6; /* use o background que já costuma usar */
+}
+
+/* título e parágrafo já herdam container/center-text */
+
+/* grid de 3 colunas já está bom, só ajustar o gap se precisar */
+.section-online .grid--3-cols {
+  gap: 3rem;
+}
+
+/* cards: branco, sombra suave, bordas arredondadas */
+.online-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.online-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* ícone: use o mesmo tamanho e cor que os ícones de outras seções */
+.online-icon {
+  font-size: 3rem; /* ou o valor que você usa no hero */
+  color: #ff7700; /* mesma cor de destaque do site */
+  margin-bottom: 1rem;
+}
+
+/* título interno */
+.online-title {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #333; /* mesma cor de heading-tertiary */
+}
+
+/* descrição */
+.online-desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #666; /* mesma cor de parágrafos */
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 185px; /* largura do seu PNG */
+  height: 65px; /* altura do seu PNG */
+  z-index: 999;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+
+/*CAROUSEL SLIDER*/
+.section-testimonials-carousel {
+  padding: 2rem 0;
+  background-color: #f9f7f6;
+}
+
+.section-testimonials-carousel .carousel-container {
+  position: relative;
+  max-width: 360px; /* largura final desejada */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-testimonials-carousel .carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.section-testimonials-carousel .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.section-testimonials-carousel .carousel-slide {
+  min-width: 100%;
+  list-style: none;
+}
+
+.section-testimonials-carousel .carousel-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 200px; /* limita a altura pra não ficar gigante */
+  object-fit: contain;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+/* botões de navegação continuam iguais, só escopados */
+.section-testimonials-carousel .carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.section-testimonials-carousel .carousel-btn.prev {
+  left: 0.5rem;
+}
+
+.section-testimonials-carousel .carousel-btn.next {
+  right: 0.5rem;
+}
+
+.section-testimonials-carousel .carousel-btn ion-icon {
+  font-size: 1.5rem;
+}
+
+/* JANELA DE SAIBA MAIS*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 500px;
+  position: relative;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
 }

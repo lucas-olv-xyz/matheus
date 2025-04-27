@@ -1,41 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNRK8D05F2"></script>
-<!-- Event snippet for Botão WhatsApp conversion -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNRK8D05F2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PNRK8D05F2');
-</script>
-
-<!-- Event snippet for Botão de Whats08Fev25 conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-
-<script>
-    function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      };
-      gtag('event', 'conversion', {
-          'send_to': 'AW-11168370055/-ZGzCIjgp5saEIebv80p',
-          'value': 1.0,
-          'currency': 'BRL',
-          'event_callback': callback
-      });
-      return false;
-    }
-    </script>
-    
-  
-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- that line below is crucial for a responsive design.. always write that -->
@@ -64,11 +29,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 
     <title>Matheus Martins &dash; psicologia clínica </title>
   </head>
+
   <body>
     <!-- nav-open -->
     <header class="header">
       <a href="#">
-      <img class="logo" alt="matheus martins logo" src="img/mmlogo.webp" /></a>
+      <img class="logo" alt="matheus martins logo" src="img/mmlogo.png" /></a>
 
       <nav class="main-nav">
         <ul class="main-nav-list">
@@ -76,7 +42,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
           <li><a class="main-nav-link" href="#meals">Consultório</a></li>
           <li><a class="main-nav-link" href="#testimonials">Depoimentos</a></li>
           <li><a class="main-nav-link" href="#contato">Contato</a></li>
-          <li><a class="main-nav-link nav-cta" href="https://api.whatsapp.com/send?phone=5561982836983" onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});">Fale comigo</a></li>
+          <li><a class="main-nav-link nav-cta" href="https://api.whatsapp.com/send?phone=5561982836983">Fale comigo</a></li>
         </ul>
       </nav>
 
@@ -87,67 +53,65 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     </header>
 
     <main>
-      <section class="section-hero">
-        <div class="hero">
-          <div class="hero-text-box">
-            <h1 class="heading-primary">
-              Especialista em Terapia Cognitivo-Comportamental 
-            </h1>
-            <h1 class="heading-tertiary">Com ênfase no tratamento de dependência tecnológica</h1>
-            
-            <p class="hero-description">
-                Ajudo você a encontrar equilíbrio entre o mundo online e o offline, superando desafios como ansiedade, procrastinação e vícios digitais. Redescubra seu potencial e conquiste uma rotina mais saudável e produtiva!
-            </p>
-            <a href="https://api.whatsapp.com/send?phone=5561982836983" onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});" class="btn btn--full margin-right-sm"
-              >Fale comigo</a
-            >
-            <a href="#how" class="btn btn--outline">Saiba mais &darr;</a>
-            
-
-
-            <div class="delivered-meals">
-              <div class="delivered-imgs">
-                <img src="img/customers/customer-1.webp" alt="Foto de cliente" />
-                <img src="img/customers/customer-2.webp" alt="Foto de cliente" />
-                <img
-                  src="img/customers/customer-3.webp"
-                  alt="Foto de cliente"
-                /><img
-                  src="img/customers/customer-4.webp"
-                  alt="Foto de cliente"
-                />
-                <img
-                  src="img/customers/customer-5.webp"
-                  alt="Foto de cliente"
-                /><img
-                  src="img/customers/customer-6.webp"
-                  alt="Foto de cliente"
-                />
-              </div>
-              <p class="delivered-text">
-                <span>2.500+</span> consultas realizadas e muitas vidas transformadas!
-              </p>
-            </div>
+<!-- Nova seção somente com o vídeo -->
+<section class="section-video">
+    <div class="video-container">
+        <iframe width="1236" height="695" src="https://www.youtube.com/embed/VD8L16bQWQA" title="Seu Celular Está Dominando Sua Vida? 🤔📱" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+  
+  <!-- Seção original, sem o vídeo -->
+  <section class="section-hero" id="hero">
+    <div class="container grid grid--2-cols grid--center-v hero">
+      <!-- texto -->
+      <div class="hero-text-box">
+        <h1 class="heading-primary">
+          Especialista em Terapia Cognitivo-Comportamental 
+        </h1>
+        <h1 class="heading-tertiary">
+          Com ênfase no tratamento de dependência tecnológica
+        </h1>
+        
+        <p class="hero-description">
+          Ajudo você a encontrar equilíbrio entre o mundo online e o offline, superando desafios como ansiedade, procrastinação e vícios digitais. Redescubra seu potencial e conquiste uma rotina mais saudável e produtiva!
+        </p>
+        <a 
+          href="https://api.whatsapp.com/send?phone=5561982836983" 
+          onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});" 
+          class="btn btn--full margin-right-sm">
+          Fale comigo
+        </a>
+        <a href="#how" class="btn btn--outline">
+          Saiba mais &darr;
+        </a>
+  
+        <div class="delivered-meals">
+          <div class="delivered-imgs">
+            <img src="img/customers/customer-1.webp" alt="Foto de cliente" />
+            <img src="img/customers/customer-2.webp" alt="Foto de cliente" />
+            <img src="img/customers/customer-3.webp" alt="Foto de cliente" />
+            <img src="img/customers/customer-4.webp" alt="Foto de cliente" />
+            <img src="img/customers/customer-5.webp" alt="Foto de cliente" />
+            <img src="img/customers/customer-6.webp" alt="Foto de cliente" />
           </div>
-            <!-- Caixa do vídeo -->
-            <div class="hero-video-box">
-                <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/Zyyn5rvmJ9I"
-                title="Apresentação Dr. Matheus" 
-                frameborder="0"
-                allow="accelerometer; 
-                        autoplay; 
-                        clipboard-write; 
-                        encrypted-media; 
-                        gyroscope; 
-                        picture-in-picture"
-                allowfullscreen>
-                </iframe>
-            </div>
+          <p class="delivered-text">
+            <span>6.200+</span> consultas realizadas e muitas vidas transformadas!
+          </p>
         </div>
-      </section>
+      </div>
+  
+      <!-- nova coluna de imagem -->
+      <div class="hero-img-box">
+        <img 
+          src="img/matheus.png" 
+          alt="Dr. Matheus em atendimento" 
+          class="hero-img"
+        />
+      </div>
+    </div>
+  </section>
+  
+  
 
 <!-- Logo depois do section-hero, antes do section-how -->
 <section class="section-authority" id="authority">
@@ -168,20 +132,20 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       
       <div class="authority-item">
         <ion-icon name="medal-outline" class="authority-icon"></ion-icon>
-        <h3 class="authority-title">4.200+</h3>
-        <p class="authority-text">Sessões já realizadas</p>
+        <h3 class="authority-title">6.200+</h3>
+        <p class="step-description">Sessões já realizadas</p>
       </div>
   
       <div class="authority-item">
         <ion-icon name="people-circle-outline" class="authority-icon"></ion-icon>
         <h3 class="authority-title">Palestras</h3>
-        <p class="authority-text">Conferências realizadas em empresas, escolas e eventos sobre bem-estar mental e dependência digital.</p>
+        <p class="step-description">Conferências realizadas em empresas, escolas e eventos sobre bem-estar mental e dependência digital.</p>
       </div>
   
       <div class="authority-item">
         <ion-icon name="logo-youtube" class="authority-icon"></ion-icon>
         <h3 class="authority-title">Canal no YouTube</h3>
-        <p class="authority-text">Acesse vídeos sobre saúde mental, terapia, desenvolvimento pessoal e muito mais.</p>
+        <p class="step-description">Acesse vídeos sobre saúde mental, terapia, desenvolvimento pessoal e muito mais.</p>
       </div>
   
     </div>
@@ -189,7 +153,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     <!-- Botão para o canal do YouTube ou vídeo embed -->
     <div class="container center-text section-authority-cta">
       <a 
-        href="https://youtube.com/seu-canal" 
+        href="https://www.youtube.com/@PsicologoMatheusMartins" 
         class="btn btn--outline" 
         target="_blank"
       >
@@ -198,248 +162,370 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     </div>
   </section>
 
-      <section class="section-how" id="how">
-        <div class="container">
-          <span class="subheading">o que ofereço</span>
-          <h2 class="heading-secondary">
-            Desbloqueando seu bem-estar mental com serviços essenciais
-          </h2>
-        </div>
-        <div class="container grid grid--2-cols grid--center-v">
-          <!-- STEP 01 -->
-          <div class="step-text-box">
-            <p class="step-number">01</p>
-            <h3 class="heading-tertiary">
-              Atendimento para casais:
-            </h3>
-            <p class="step-description">
-              Estou aqui para oferecer atendimento especializado com um psicólogo experiente, dedicado a ajudar casais a fortalecer e aprimorar sua relação. O objetivo é proporcionar um espaço seguro e acolhedor, onde vocês possam explorar e resolver questões que possam estar impactando o relacionamento.
-            </p>
-          </div>
-          <!-- TEST 02 -->
-          <div class="step-img-box">
-            <img
-              src="img/app/1.webp"
-              class="step-img"
-              alt="tela de celular com foto de uma casal no por do sol"
-            />
-          </div>
-          <div class="step-img-box">
-            <img
-              src="img/app/2.webp"
-              class="step-img"
-              alt="tela de celular com foto de uma caderno e uma caneta"
-            />
-          </div>
-          <div class="step-text-box">
-            <p class="step-number">02</p>
-            <h3 class="heading-tertiary">Avaliação psicológica:</h3>
-            <p class="step-description">
-              A avaliação psicológica é importante para determinar a aptidão de uma pessoa para realizar certos procedimentos cirúrgicos, como a cirurgia bariátrica, vasectomia ou laqueadura. Nesse caso, o objetivo é avaliar sua saúde emocional e psicológica, garantindo que você esteja preparado(a) e apto(a) para enfrentar essas cirurgias.
-          </div>
-          <!-- STEP 03 -->
-          <div class="step-text-box">
-            <p class="step-number">03</p>
-            <h3 class="heading-tertiary">Psicoterapia (presencial ou online):</h3>
-            <p class="step-description">
-              Entendo que cada pessoa tem suas próprias queixas e preocupações únicas. Portanto, estou aqui para ouvir você e oferecer suporte psicológico. Quais são suas principais preocupações? Seja procrastinação, ansiedade, depressão ou qualquer outra questão, sinta-se à vontade para conversar comigo.
-            </p>
-          </div>
-          <div class="step-img-box">
-            <img
-              src="img/app/3.webp"
-              class="step-img"
-              alt="tela de celular com duas pessoas com as mãos dadas, simbolizando amizade e confiança"
-            />
-          </div>
-           <!-- STEP 03 --><div class="step-img-box">
-            <img
-              src="img/app/4.webp"
-              class="step-img"
-              alt="tela de celular mostrando pessoas interagindo em uma sala de aula"
-            />
-          </div>
-           <div class="step-text-box">
-            <p class="step-number">04</p>
-            <h3 class="heading-tertiary">Orientação profissional:</h3>
-            <p class="step-description">
-              Exploraremos juntos seus interesses, habilidades, valores e metas pessoais. Realizaremos uma análise aprofundada do seu perfil e discutiremos as opções de carreira disponíveis, levando em consideração fatores como suas preferências, aptidões e objetivos de vida.
-            </p>
-          </div>
-        </div>
-      </section>
+  <section class="section-how" id="how">
+    <div class="container">
+      <span class="subheading">o que ofereço</span>
+      <h2 class="heading-secondary">
+        Desbloqueando seu bem-estar mental com serviços essenciais
+      </h2>
+    </div>
+    <div class="container grid grid--2-cols grid--center-v">
+      <!-- STEP 01 -->
+      <div class="step-text-box">
+        <p class="step-number">01</p>
+        <h3 class="heading-tertiary">Atendimento para casais:</h3>
+        <p class="step-description">
+          Estou aqui para oferecer atendimento especializado com um psicólogo experiente, dedicado a ajudar casais a fortalecer e aprimorar sua relação. O objetivo é proporcionar um espaço seguro e acolhedor, onde vocês possam explorar e resolver questões que possam estar impactando o relacionamento.
+        </p>
+        <button class="btn btn--outline" onclick="openModal('modal-step-01')">
+          Saiba mais
+        </button>
+      </div>
+      <div class="step-img-box">
+        <img src="img/app/1.webp" class="step-img" alt="casal de mãos dadas, pôr do sol" />
+      </div>
+  
+      <!-- STEP 02 -->
+      <div class="step-img-box">
+        <img src="img/app/2.webp" class="step-img" alt="caderno e caneta em mesa" />
+      </div>
+      <div class="step-text-box">
+        <p class="step-number">02</p>
+        <h3 class="heading-tertiary">Avaliação psicológica:</h3>
+        <p class="step-description">
+          A avaliação psicológica é importante para determinar a aptidão de uma pessoa para realizar certos procedimentos cirúrgicos, como a cirurgia bariátrica, vasectomia ou laqueadura. Nesse caso, o objetivo é avaliar sua saúde emocional e psicológica, garantindo que você esteja preparado(a) e apto(a) para enfrentar essas cirurgias.
+        </p>
+        <button class="btn btn--outline" onclick="openModal('modal-step-02')">
+          Saiba mais
+        </button>
+      </div>
+  
+      <!-- STEP 03 -->
+      <div class="step-text-box">
+        <p class="step-number">03</p>
+        <h3 class="heading-tertiary">Psicoterapia (presencial ou online):</h3>
+        <p class="step-description">
+          Entendo que cada pessoa tem suas próprias queixas e preocupações únicas. Portanto, estou aqui para ouvir você e oferecer suporte psicológico. Quais são suas principais preocupações? Seja procrastinação, ansiedade, depressão ou qualquer outra questão, sinta-se à vontade para conversar comigo.
+        </p>
+        <button class="btn btn--outline" onclick="openModal('modal-step-03')">
+          Saiba mais
+        </button>
+      </div>
+      <div class="step-img-box">
+        <img src="img/app/3.webp" class="step-img" alt="pessoas de mãos dadas simbolizando confiança" />
+      </div>
+  
+      <!-- STEP 04 -->
+      <div class="step-img-box">
+        <img src="img/app/4.webp" class="step-img" alt="sala de aula com pessoas interagindo" />
+      </div>
+      <div class="step-text-box">
+        <p class="step-number">04</p>
+        <h3 class="heading-tertiary">Orientação profissional:</h3>
+        <p class="step-description">
+          Exploraremos juntos seus interesses, habilidades, valores e metas pessoais. Realizaremos uma análise aprofundada do seu perfil e discutiremos as opções de carreira disponíveis, levando em consideração fatores como suas preferências, aptidões e objetivos de vida.
+        </p>
+        <button class="btn btn--outline" onclick="openModal('modal-step-04')">
+          Saiba mais
+        </button>
+      </div>
+  
+      <!-- STEP 05 -->
+      <div class="step-text-box">
+        <p class="step-number">05</p>
+        <h3 class="heading-tertiary">Psicoterapia Breve:</h3>
+        <p class="step-description">
+          A Psicoterapia Breve é um modelo de intervenção focado em objetivos pontuais, com um número reduzido de sessões. Ideal para quem busca resultados rápidos e efetivos em questões específicas, promovendo mudanças significativas em pouco tempo.
+        </p>
+        <button class="btn btn--outline" onclick="openModal('modal-step-05')">
+          Saiba mais
+        </button>
+      </div>
+      <div class="step-img-box">
+        <img src="img/app/5.png" class="step-img" alt="ilustração representando terapia breve" />
+      </div>
+  
+      <!-- STEP 06 (exemplo genérico) -->
+      <div class="step-img-box">
+        <img src="img/app/6.png" class="step-img" alt="serviço extra" />
+      </div>
+      <div class="step-text-box">
+        <p class="step-number">06</p>
+        <h3 class="heading-tertiary">Transição de Carreira:</h3>
+        <p class="step-description">
+            Mudar de profissão é um passo importante. A orientação para transição de carreira ajuda você a planejar esse movimento com consciência, reconhecendo seus talentos e novos objetivos.
+            Sentir-se inseguro ao mudar de área é natural. No processo de transição de carreira, você recebe suporte para avaliar suas competências, identificar novas oportunidades e construir um novo caminho com confiança.
+        </p>
+        <button class="btn btn--outline" onclick="openModal('modal-step-06')">
+          Saiba mais
+        </button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modais (coloque logo após a section ou no final do body) -->
+  <!-- STEP 01 Modal -->
+  <div id="modal-step-01" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('modal-step-01')">&times;</span>
+      <p>Relacionamentos passam por fases e desafios. A psicoterapia de casal é um espaço para melhorar o diálogo, fortalecer a conexão ou refletir sobre os caminhos do relacionamento.
+        Se a comunicação falha ou a relação parece desgastada, a terapia de casal pode ajudar. Aqui, o objetivo é construir, reconstruir ou decidir, com respeito e compreensão.</p>
+    </div>
+  </div>
+  <!-- STEP 02 Modal -->
+  <div id="modal-step-02" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('modal-step-02')">&times;</span>
+      <p>A avaliação psicológica é um instrumento importante para entender melhor aspectos emocionais, cognitivos e comportamentais, auxiliando em diagnósticos, decisões e tratamentos.
+        Com base em testes, entrevistas e análise técnica, a avaliação psicológica oferece uma visão mais precisa sobre suas características e necessidades, ajudando na busca por soluções adequadas.</p>
+    </div>
+  </div>
+  <!-- STEP 03 Modal -->
+  <div id="modal-step-03" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('modal-step-03')">&times;</span>
+      <p>Para quem deseja se conhecer melhor, lidar com questões profundas ou construir mudanças consistentes ao longo do tempo, a psicoterapia tradicional oferece espaço e suporte para essa jornada.
+        Alguns processos precisam de tempo para amadurecer. Na psicoterapia tradicional, trabalhamos em seu ritmo, explorando suas histórias, sentimentos e comportamentos de forma acolhedora e contínua</p>
+    </div>
+  </div>
+  <!-- STEP 04 Modal -->
+  <div id="modal-step-04" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('modal-step-04')">&times;</span>
+      <p>Escolher uma profissão é uma decisão importante. A orientação profissional apoia você a identificar seus interesses, habilidades e valores para construir um caminho mais seguro e satisfatório.
+        Se você sente dúvidas sobre seu futuro profissional, a orientação ajuda a trazer clareza, alinhando seu perfil pessoal às possibilidades de carreira que mais fazem sentido para você.</p>
+    </div>
+  </div>
+  <!-- STEP 05 Modal -->
+  <div id="modal-step-05" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('modal-step-05')">&times;</span>
+      <p>Precisa lidar com uma situação específica sem um compromisso terapêutico longo? A psicoterapia breve é focada em soluções práticas, ajudando você a encontrar clareza e bem-estar em menos sessões.
+        Questões pontuais pedem abordagens objetivas. A psicoterapia breve é indicada para quem busca mudanças em um tempo mais curto, com foco claro e estratégias direcionadas.</p>
+    </div>
+  </div>
+  <!-- STEP 06 Modal -->
+  <div id="modal-step-06" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal('modal-step-06')">&times;</span>
+      <p>Mudar de profissão é um passo importante. A orientação para transição de carreira ajuda você a planejar esse movimento com consciência, reconhecendo seus talentos e novos objetivos.
+        Sentir-se inseguro ao mudar de área é natural. No processo de transição de carreira, você recebe suporte para avaliar suas competências, identificar novas oportunidades e construir um novo caminho com confiança.
+        </p>
+    </div>
+  </div>
+  
+  <!-- JS para abrir/fechar -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+    // fecha modal ao clicar fora do conteúdo
+    window.addEventListener('click', e => {
+      if (e.target.classList.contains('modal')) {
+        e.target.style.display = 'none';
+      }
+    });
+  </script>
+  
       
-      <section class="section-meals" id="meals">
-        <div class="container center-text">
-          <span class="subheading">Consultório</span>
-          <h2 class="heading-secondary">
-            Um local seguro para explorar seu potencial e superar desafios
-          </h2>
+  <section class="section-meals" id="meals">
+    <div class="container center-text">
+      <span class="subheading">Consultório</span>
+      <h2 class="heading-secondary">
+        Um local seguro para explorar seu potencial e superar desafios
+      </h2>
+    </div>
+  
+    <!-- ATENDIMENTO PRESENCIAL -->
+    <div class="container margin-bottom-md">
+      <h3 class="heading-tertiary center-text">Atendimento presencial:</h3>
+      <div class="grid grid--3-cols">
+        <div class="meal">
+          <img
+            src="img/meals/meal-1.png"
+            class="meal-img"
+            alt="foto do prédio Brasília Medical Center"
+          />
+          <div class="meal-content">
+            <div class="meal-tags">
+              <span class="tag tag--vegetarian">Asa Norte</span>
+            </div>
+            <p class="meal-title">Shopping ID</p>
+            <ul class="meal-attributes">
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="location-outline"></ion-icon>
+                <span>Norte Comercial Sector - Quadra 06, Conjunto A Edifício Venâncio 3.000 <strong>70297-400</strong></span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="alert-outline"></ion-icon>
+                <span>Atendimento somente com horário <strong>previamente</strong> agendado</span>
+              </li>
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="map-outline"></ion-icon>
+                <span><strong><a href="https://maps.app.goo.gl/sPmB6gdsp1wfDfH9A" class="link" target="_blank">Google Maps</a></strong></span>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        <div class="container grid grid--3-cols margin-bottom-md">
-          <div class="meal">
-            <img
-              src="img/meals/meal-1.webp"
-              class="meal-img"
-              alt="foto do predio brasilia medical center"
-            />
-            <div class="meal-content">
-              <div class="meal-tags">
-                <span class="tag tag--vegetarian">Asa Norte</span>
-              </div>
-              <p class="meal-title">Brasília Medical Center</p>
-              <ul class="meal-attributes">
-                <li class="meal-attribute">
-                  <ion-icon  class="meal-icon" name="location-outline"></ion-icon><span>  SGAN 607, Conj A, Bl B, Sala 126 e 114 -  <strong>70380-301</strong></span>
-                </li>
-                <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="alert-outline"></ion-icon><span> Atendimento somente com horário <strong>previamente</strong> agendado  </span>
-                </li>
-                <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="map-outline"></ion-icon><span><strong><a href="https://goo.gl/maps/tSxB2P6DUrDqu1a36" class="link" target="_blank"> Google maps </a></strong></span>
-                </li>
-                </li>
-              </ul>
+  
+        <div class="meal">
+          <img
+            src="img/meals/meal-2.webp"
+            class="meal-img"
+            alt="foto do prédio Atlantis Trade Center"
+          />
+          <div class="meal-content">
+            <div class="meal-tags">
+              <span class="tag tag--vegan">Águas Claras</span>
             </div>
-          </div>
-          <div class="meal">
-            <img
-              src="img/meals/meal-2.webp"
-              class="meal-img"
-              alt="foto do predio atlantis trade center"
-            />
-            <div class="meal-content">
-              <div class="meal-tags">
-                <span class="tag tag--vegan">Águas Claras</span>
-                <!-- <span class="tag tag--paleo">Paleo</span> -->
-              </div>
-              <p class="meal-title">Atlantis Trade Center</p>
-              <ul class="meal-attributes">
-                <li class="meal-attribute">
-                  <ion-icon  class="meal-icon" name="location-outline"></ion-icon><span>R. 9 Norte, 1 -      <strong>71908-540</strong                    </span>
-                </li>
-                <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="alert-outline"></ion-icon><span>  Atendimento somente com horário <strong>previamente</strong> agendado </span>
-                </li>
-                <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="map-outline"></ion-icon><span><strong><a href="https://goo.gl/maps/p4ntCHHTHLURGaJV7" class="link" target="_blank" > Google maps </a></strong></span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="diets">
-            <h3 class="heading-tertiary">Atendimento online:</h3>
-            <ul class="list">
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Conveniência</span>
+            <p class="meal-title">Atlantis Trade Center</p>
+            <ul class="meal-attributes">
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="location-outline"></ion-icon>
+                <span>R. 9 Norte, 1 — <strong>71908-540</strong></span>
               </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Acessibilidade</span>
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="alert-outline"></ion-icon>
+                <span>Atendimento somente com horário <strong>previamente</strong> agendado</span>
               </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Flexibilidade</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Conforto</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Intimidade</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Segurança</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Eficiência</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Suporte personalizado</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Conectividade</span>
-              </li>
-              <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Continuidade</span>
+              <li class="meal-attribute">
+                <ion-icon class="meal-icon" name="map-outline"></ion-icon>
+                <span><strong><a href="https://goo.gl/maps/p4ntCHHTHLURGaJV7" class="link" target="_blank">Google Maps</a></strong></span>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- <div class="container all-recipes">
-          <a href="#" class="link"> See all recipes &rarr;</a>
-        </div> -->
-      </section>
-
-      <section class="section-testimonials" id="testimonials">
-        <div class="testimonials-container">
-          <span class="subheading">Depoimentos</span>
-          <h2 class="heading-secondary">Descubra como a terapia pode transformar sua vida</h2>
-
-          <div class="testimonials">
-            <figure class="testimonial">
-              <img
-                class="testimonial-img"
-                alt="foto da cliente carine"
-                src="img/customers/carine.webp"
-              />
-              <blockquote class="testimonial-text">
-                Matheus é um profissional da maior qualidade! Sou paciente dele um pouco mais de um ano, e é nítido o meu crescimento devido às nossas sessões. Recentemente passei por um acontecimento, que há um ano, com certeza resultaria em crises de estresse, ansiedade e pânico. Contudo, devido ao trabalho feito nas sessões, pude colocar em prática tudo aquilo que aprendi na teoria. Durante os momento mais críticos, relembrei dos aconselhamentos que o Matheus havia me passado e isso foi o que mais me ajudou a evitar as crises e poder solucionar o problema.
-                Matheus é um profissional exemplar!
-              </blockquote>
-              <p class="testimonial-name">&mdash;(Carine Fernandes)</p>
-            </figure>
-
-            <figure class="testimonial">
-              <img
-                class="testimonial-img"
-                alt="foto da cliente julia "
-                src="img/customers/julia.webp"
-              />
-              <blockquote class="testimonial-text">
-                O acompanhamento com o psicólogo Matheus foi essencial! Ele foi um dos profissionais que tive contato, que realmente estava presente na sessão, e seus questionamentos para que eu viesse a "andar com as minhas próprias pernas" foi muito relevante!
-              </blockquote>
-              <p class="testimonial-name">&mdash;(Júlia Inácio)</p>
-            </figure>
-
-            <figure class="testimonial">
-              <img
-                class="testimonial-img"
-                alt="foto da cliente dolores"
-                src="img/customers/dolores.webp"
-              />
-              <blockquote class="testimonial-text">
-                Faço acompanhamento com o psicólogo Matheus há algum meses, tem sido uma experiência muito gratificante. Sempre tive resistência à terapia, mas ele me ajudou muito nesse processo. Me senti muito acolhida e a vontade. Não tenho palavras para descrever o trabalho sensacional que ele desenvolve. Ele é um profissional de excelência, eu o recomendo de olhos fechados.
-              </blockquote>
-              <p class="testimonial-name">&mdash;(Dolores Costa)</p>
-            </figure>
-
-            <figure class="testimonial">
-              <img
-                class="testimonial-img"
-                alt="foto do cliente lucas "
-                src="img/customers/lucas.webp"
-              />
-              <blockquote class="testimonial-text">
-                O Doutor Matheus é um excelente terapeuta, sempre te escuta com tranquilidade e coloca as melhores opções para você racionar e refletir sendo em situações pessoais ou profissionais.
-              </blockquote>
-              <p class="testimonial-name">&mdash;(Lucas Gama)</p>
-            </figure>
-            
+        <div class="meal">
+            <img
+              src="img/meals/meal-3.jpeg"
+              class="meal-img"
+              alt="foto da cidade do gama"
+            />
+            <div class="meal-content">
+              <div class="meal-tags">
+                <span class="tag tag--vegan">Gama</span>
+              </div>
+              <p class="meal-title">Gama</p>
+              <ul class="meal-attributes">
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="location-outline"></ion-icon>
+                  <span>Entre em contato para saber mais <strong></strong></span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="alert-outline"></ion-icon>
+                  <span>Atendimento somente com horário <strong>previamente</strong> agendado</span>
+                </li>
+                <li class="meal-attribute">
+                  <ion-icon class="meal-icon" name="map-outline"></ion-icon>
+                  <span><strong><a href="https://maps.app.goo.gl/XQAp9cMMq5V7NFWh6" class="link" target="_blank">Google Maps</a></strong></span>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>  
-      </section>
-   
+      </div>
+    </div>
+  
+<!-- ATENDIMENTO ONLINE -->
+<section class="section-online step-description" id="online">
+    <div class="container center-text margin-bottom-md">
+      <h3 class="heading-tertiary">Atendimento online</h3>
+      <p class="paragraph">
+        Conecte-se de qualquer lugar com toda a segurança, privacidade e conforto que você precisa.
+      </p>
+    </div>
+  
+    <div class="container grid grid--3-cols">
+      <div class="online-card ">
+        <ion-icon class="online-icon" name="videocam-outline"></ion-icon>
+        <h4 class="online-title">Plataforma Segura</h4>
+        <p class="online-desc ">
+          Sessões via Zoom ou Google Meet, com criptografia ponta a ponta e sala de espera exclusiva.
+        </p>
+      </div>
+  
+      <div class="online-card">
+        <ion-icon class="online-icon" name="time-outline"></ion-icon>
+        <h4 class="online-title">Flexibilidade de Horários</h4>
+        <p class="online-desc">
+          Agende no dia e horário que melhor se encaixa na sua rotina, sem deslocamentos.
+        </p>
+      </div>
+  
+      <div class="online-card">
+        <ion-icon class="online-icon" name="wallet-outline"></ion-icon>
+        <h4 class="online-title">Pagamento Online</h4>
+        <p class="online-desc">
+          Pagamento seguro via Pix, cartão ou boleto, diretamente pelo nosso portal.
+        </p>
+      </div>
+  
+      <div class="online-card">
+        <ion-icon class="online-icon" name="heart-outline"></ion-icon>
+        <h4 class="online-title">Conforto e Privacidade</h4>
+        <p class="online-desc">
+          Converse do seu espaço, sem testemunhas, com total sigilo profissional.
+        </p>
+      </div>
+  
+      <div class="online-card">
+        <ion-icon class="online-icon" name="chatbubbles-outline"></ion-icon>
+        <h4 class="online-title">Suporte Contínuo</h4>
+        <p class="online-desc">
+          Mensagens e orientações rápidas entre as sessões, para você se sentir amparado.
+        </p>
+      </div>
+  
+      <div class="online-card">
+        <ion-icon class="online-icon" name="globe-outline"></ion-icon>
+        <h4 class="online-title">Acessível de Qualquer Lugar</h4>
+        <p class="online-desc">
+          Não importa onde você esteja, basta ter uma conexão à internet estável.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  <section class="section-testimonials-carousel" id="reviews-carousel">
+    <div class="container center-text margin-bottom-md">
+      <span class="subheading" id="testimonials">Depoimentos</span>
+      <h2 class="heading-secondary">O que dizem nossos pacientes</h2>
+      <p class="paragraph step-description">
+        Veja alguns prints de quem já vivenciou a transformação com a nossa terapia.
+      </p>
+    </div>
+  
+    <div class="carousel-container">
+      <button class="carousel-btn prev">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </button>
+  
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <img src="img/review1.png" alt="Depoimento 1" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/review2.png" alt="Depoimento 2" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/review3.png" alt="Depoimento 3" />
+          </li>
+          <!-- adicione mais slides se precisar -->
+        </ul>
+      </div>
+  
+      <button class="carousel-btn next">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </button>
+    </div>
+  </section>
+  
 
         <div class="container grid">
           <aside class="plan-details">
@@ -482,7 +568,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         </div>
       </section> 
 
-       <section class="section-cta" id="cta">
+<section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -509,7 +595,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 <div class="container grid grid--footer">
   <div class="logo-col">
     <a href="#" class="footer-logo">
-      <img class="logo" alt="matheus martins logo" src="img/mmlogo.webp" />
+      <img class="logo" alt="matheus martins logo" src="img/mmlogo.png" />
     </a>
 
 <ul class="social-links">
@@ -535,20 +621,49 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   </div>
     </footer>
 
-    <!-- Event snippet for Botão WhatsApp3 conversion page -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function() {
-          if (typeof url != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-          send_to: 'AW-11168370055/Fp2HCOnLlKgYEIebv80p',
-          event_callback: callback,
-        });
-        return false;
-      }
-    </script>
+
+<script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const btnNext = document.querySelector('.carousel-btn.next');
+    const btnPrev = document.querySelector('.carousel-btn.prev');
+  
+    // posiciona cada slide lado a lado
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    slides.forEach((slide, index) => {
+      slide.style.left = slideWidth * index + 'px';
+    });
+  
+    function moveToSlide(track, currentSlide, targetSlide) {
+      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+      currentSlide.classList.remove('current-slide');
+      targetSlide.classList.add('current-slide');
+    }
+  
+    btnNext.addEventListener('click', () => {
+      const current = track.querySelector('.current-slide');
+      const next = current.nextElementSibling;
+      if (!next) return; // no more slides
+      moveToSlide(track, current, next);
+    });
+  
+    btnPrev.addEventListener('click', () => {
+      const current = track.querySelector('.current-slide');
+      const prev = current.previousElementSibling;
+      if (!prev) return;
+      moveToSlide(track, current, prev);
+    });
+  </script>
+  
+    <a
+  href="https://api.whatsapp.com/send?phone=5561982836983"
+  class="whatsapp-float"
+  target="_blank"
+  rel="noopener"
+>
+  <img src="img/whatsapp.png" alt="WhatsApp" />
+</a>
+
   </body>
+
 </html>
