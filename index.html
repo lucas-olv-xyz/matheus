@@ -28,6 +28,38 @@
 <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
 
     <title>Matheus Martins &dash; psicologia clínica </title>
+    <!-- Google tag (GA4 + Google Ads) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PNRK8D05F2"></script>
+<script>
+  /* base */
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  /* GA4 page-view + remarketing */
+  gtag('config', 'G-PNRK8D05F2');
+  gtag('config', 'AW-11168370055');
+
+  /* Função de conversão para WhatsApp */
+  function gtag_report_conversion(url){
+    /* envia evento GA4 */
+    gtag('event','clique-whatsapp',{
+      event_category:'botao',
+      event_label:'Conversa no WhatsApp'
+    });
+
+    /* envia conversão Google Ads */
+    var cb=function(){ if(url) window.location=url; };
+    gtag('event','conversion',{
+      send_to:'AW-11168370055/-ZGzCIjgp5saEIebv80p',
+      value:1.0,
+      currency:'BRL',
+      event_callback:cb
+    });
+    return false; /* aguarda callback antes de ir para o link */
+  }
+</script>
+
   </head>
 
   <body>
@@ -42,7 +74,7 @@
           <li><a class="main-nav-link" href="#meals">Consultório</a></li>
           <li><a class="main-nav-link" href="#testimonials">Depoimentos</a></li>
           <li><a class="main-nav-link" href="#contato">Contato</a></li>
-          <li><a class="main-nav-link nav-cta" href="https://api.whatsapp.com/send?phone=5561982836983">Fale comigo</a></li>
+          <li><a class="main-nav-link nav-cta" onclick="return gtag_report_conversion(this.href);" href="https://api.whatsapp.com/send?phone=5561982836983">Fale comigo</a></li>
         </ul>
       </nav>
 
@@ -54,11 +86,7 @@
 
     <main>
 <!-- Nova seção somente com o vídeo -->
-<section class="section-video">
-    <div class="video-container">
-        <iframe width="1236" height="695" src="https://www.youtube.com/embed/VD8L16bQWQA" title="Seu Celular Está Dominando Sua Vida? 🤔📱" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </section>
+
   
   <!-- Seção original, sem o vídeo -->
 <section class="section-hero" id="hero">
@@ -77,7 +105,7 @@
         </p>
         <a 
           href="https://api.whatsapp.com/send?phone=5561982836983" 
-          onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});" 
+          onclick="return gtag_report_conversion(this.href);"
           class="btn btn--full margin-right-sm">
           Fale comigo
         </a>
@@ -111,6 +139,73 @@
     </div>
   </section>
   
+  <section class="section-video">
+    
+  <div class="video-wrapper">
+
+    <iframe 
+      width="100%" 
+      height="100%" 
+      src="https://www.youtube.com/embed/VD8L16bQWQA" 
+      title="Seu Celular Está Dominando Sua Vida? 🤔📱" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+  <section class="section-testimonials-carousel" id="reviews-carousel">
+    <div class="container center-text margin-bottom-md">
+      <span class="subheading" id="testimonials">Depoimentos</span>
+      <h2 class="heading-secondary">O que dizem nossos pacientes</h2>
+      <p class="paragraph step-description">
+        Veja alguns prints de quem já vivenciou a transformação com a nossa terapia.
+      </p>
+    </div>
+  
+    <div class="carousel-container">
+      <button class="carousel-btn prev">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </button>
+  
+      <div class="carousel-track-container">
+        <ul class="carousel-track">
+          <li class="carousel-slide current-slide">
+            <img src="img/review1.png" alt="Depoimento 1" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/review2.png" alt="Depoimento 2" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/review3.png" alt="Depoimento 3" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/review4.png" alt="Depoimento 3" />
+          </li>
+          <li class="carousel-slide">
+            <img src="img/review5.png" alt="Depoimento 3" />
+          </li>
+          <!-- adicione mais slides se precisar -->
+        </ul>
+      </div>
+
+
+  
+      <button class="carousel-btn next">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </button>
+    </div>      <div class="carousel-indicators">
+  <button class="dot active"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+  <button class="dot"></button>
+</div>
+
+
+</section>
   
 
 <!-- Logo depois do section-hero, antes do section-how -->
@@ -489,45 +584,9 @@
         </p>
       </div>
     </div>
-  </section>
-  
+</section>
+   
 
-  
-  <section class="section-testimonials-carousel" id="reviews-carousel">
-    <div class="container center-text margin-bottom-md">
-      <span class="subheading" id="testimonials">Depoimentos</span>
-      <h2 class="heading-secondary">O que dizem nossos pacientes</h2>
-      <p class="paragraph step-description">
-        Veja alguns prints de quem já vivenciou a transformação com a nossa terapia.
-      </p>
-    </div>
-  
-    <div class="carousel-container">
-      <button class="carousel-btn prev">
-        <ion-icon name="chevron-back-outline"></ion-icon>
-      </button>
-  
-      <div class="carousel-track-container">
-        <ul class="carousel-track">
-          <li class="carousel-slide current-slide">
-            <img src="img/review1.png" alt="Depoimento 1" />
-          </li>
-          <li class="carousel-slide">
-            <img src="img/review2.png" alt="Depoimento 2" />
-          </li>
-          <li class="carousel-slide">
-            <img src="img/review3.png" alt="Depoimento 3" />
-          </li>
-          <!-- adicione mais slides se precisar -->
-        </ul>
-      </div>
-  
-      <button class="carousel-btn next">
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </button>
-    </div>
-  </section>
-  
 
         <div class="container grid">
           <aside class="plan-details">
@@ -579,7 +638,7 @@
                 Se você está pronto(a) para dar o primeiro passo rumo a uma vida mais plena e feliz, não hesite em entrar em contato comigo agora mesmo pelo WhatsApp. Estou aqui para ouvir, compreender e oferecer orientação especializada para ajudá-lo(a) a superar desafios e alcançar seus objetivos.
               </p>
 
-              <a class="btn btn--form" href="https://api.whatsapp.com/send?phone=5561982836983" onclick="gtag('event', 'clique-whatsapp', {'event_category': 'botao', 'event_label': 'Conversa no WhatsApp'});">
+              <a class="btn btn--form" href="https://api.whatsapp.com/send?phone=5561982836983" onclick="return gtag_report_conversion(this.href);">
                 <ion-icon name="logo-whatsapp"></ion-icon> Converse comigo agora mesmo pelo WhatsApp
               </a>
             </div>
@@ -625,39 +684,61 @@
 
 
 <script>
-    const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
-    const btnNext = document.querySelector('.carousel-btn.next');
-    const btnPrev = document.querySelector('.carousel-btn.prev');
-  
-    // posiciona cada slide lado a lado
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    slides.forEach((slide, index) => {
-      slide.style.left = slideWidth * index + 'px';
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-btn.next');
+  const prevButton = document.querySelector('.carousel-btn.prev');
+  const dots = document.querySelectorAll('.dot');
+
+  const container = document.querySelector('.carousel-track-container');
+  let currentSlideIndex = 0;
+  const slideCount = slides.length;
+
+  function updateSlidePosition() {
+    const slideWidth = container.offsetWidth;
+    track.style.transform = `translateX(-${slideWidth * currentSlideIndex}px)`;
+    updateDots();
+  }
+
+  function updateDots() {
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlideIndex);
     });
-  
-    function moveToSlide(track, currentSlide, targetSlide) {
-      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-      currentSlide.classList.remove('current-slide');
-      targetSlide.classList.add('current-slide');
-    }
-  
-    btnNext.addEventListener('click', () => {
-      const current = track.querySelector('.current-slide');
-      const next = current.nextElementSibling;
-      if (!next) return; // no more slides
-      moveToSlide(track, current, next);
+  }
+
+  nextButton.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex + 1) % slideCount;
+    updateSlidePosition();
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentSlideIndex = (currentSlideIndex - 1 + slideCount) % slideCount;
+    updateSlidePosition();
+  });
+
+  // Bolinhas clicáveis (opcional)
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentSlideIndex = index;
+      updateSlidePosition();
     });
-  
-    btnPrev.addEventListener('click', () => {
-      const current = track.querySelector('.current-slide');
-      const prev = current.previousElementSibling;
-      if (!prev) return;
-      moveToSlide(track, current, prev);
-    });
-  </script>
-  
+  });
+
+  // Autoplay a cada 5 segundos
+  setInterval(() => {
+    currentSlideIndex = (currentSlideIndex + 1) % slideCount;
+    updateSlidePosition();
+  }, 5000); // tempo em milissegundos
+
+  // Ajustar ao redimensionar a tela
+  window.addEventListener('resize', updateSlidePosition);
+
+  // Inicializar posição correta ao carregar
+  updateSlidePosition();
+</script>
+
 <a
+onclick="return gtag_report_conversion(this.href);"
   href="https://api.whatsapp.com/send?phone=5561982836983"
   class="whatsapp-float"
   target="_blank"
